@@ -24,6 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import sun.jvm.hotspot.debugger.Page;
 
 public class Calendar2Test {
 
@@ -52,8 +53,7 @@ public class Calendar2Test {
 */
 
     driver.get("https://demos.telerik.com/kendo-ui/datetimepicker/index");
-    dateBtn = driver.findElement(By.xpath("//*[@id=\"example\"]/div/span/span/span[2]/span[1]"));
-    timeBtn = driver.findElement(By.xpath("//*[@id=\"example\"]/div/span/span/span[2]/span[2]"));
+    PageFactory.initElements(driver, this);
 /*
     nextBtn = driver.findElement(By.xpath("//*[@class=\"k-widget k-calendar\"]/div[1]/a[3]"));
     prevBtn = driver.findElement(By.xpath("//*[@class=\"k-widget k-calendar\"]/div[1]/a[1]"));
