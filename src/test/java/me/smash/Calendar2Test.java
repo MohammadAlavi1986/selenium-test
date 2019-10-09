@@ -14,6 +14,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
@@ -40,13 +41,15 @@ public class Calendar2Test {
 
   @BeforeTest
   public void setUp() throws IOException {
-//    driver = new ChromeDriver();
+    driver = new ChromeDriver();
+/*
     DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
     capabilities.setCapability("ignoreZoomSetting", true);
     capabilities.setPlatform(Platform.WINDOWS);
 
 
     driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+*/
 
     driver.get("https://demos.telerik.com/kendo-ui/datetimepicker/index");
     dateBtn = driver.findElement(By.xpath("//*[@id=\"example\"]/div/span/span/span[2]/span[1]"));
@@ -61,8 +64,10 @@ public class Calendar2Test {
   public void testCalendar() {
     dateBtn.click();
 
+/*
     WebDriverWait wait = new WebDriverWait(driver, 3);
     wait.until(ExpectedConditions.elementToBeClickable(prevBtn));
+*/
 
 /*
     prevBtn.click();
