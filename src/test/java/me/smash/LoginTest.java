@@ -38,6 +38,7 @@ public class LoginTest {
   public void setUp(String browser) {
     switch (browser) {
       case "firefox":
+        System.setProperty("webdriver.gecko.driver", "/usr/local/bin/geckodriver");
         webDriver = new FirefoxDriver();
         break;
       case "chrome":
